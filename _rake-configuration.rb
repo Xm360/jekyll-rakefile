@@ -9,6 +9,12 @@ $post_ext = ".textile"
 # default location for posts
 $post_dir = "_posts/"
 
+# set layout for posts
+$layout = "simple_post"
+
+# set categories for posts
+$categories = "example"
+
 # check and warn before deploying if there are remote changes (if git is used)
 $git_check = true
 
