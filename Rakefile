@@ -192,9 +192,10 @@ task :create_post, [:date, :title, :category, :content] do |t, args|
     File.open(post_dir + filename, 'w') do |f|
       f.puts "---"
       f.puts "title: \"#{post_title}\""
-      f.puts "layout: default"
+      f.puts "layout: " + $layout
       f.puts yaml_cat if yaml_cat != nil
       f.puts "date: #{post_date}"
+      f.puts "categories: " + $categories
       f.puts "---"
       f.puts args.content if args.content != nil
     end  
